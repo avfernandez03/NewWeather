@@ -71,9 +71,9 @@ a {
     font-weight: 500;
 }
 
-.weather-app-details strong {
+.details {
     color: #f65282;
-}
+  }
 
 .weather-app-temperature-container {
     display: flex;
