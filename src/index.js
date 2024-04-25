@@ -65,3 +65,5 @@ function handleSearch(event) {
 
 let searchInputElement = document.querySelector("#search-form");
 searchInputElement.addEventListener("submit", handleSearch);
+
+searchCity("San Jose");
