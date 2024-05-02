@@ -9,7 +9,7 @@ function refreshWeather(response) {
     let date= new Date (response.data.time * 1000);
     let iconElement= document.querySelector("#icon");
 
-    
+    getForecast(response.data.city);
   
 
     cityElement.innerHTML= response.data.city;
@@ -67,7 +67,21 @@ let searchInputElement = document.querySelector("#search-form");
 searchInputElement.addEventListener("submit", handleSearch);
 
 
-function displayForecast() {
+
+
+function getForecast(city) {
+
+  let apiKey= "tee233ebaaa4783bff41331b36o08895";
+  let apiUrl=  `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios(apiUrl).then(displayForecast);
+
+}
+
+
+function displayForecast(response) {
+
+  console.log(response.data);
+  
     let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
     let forecastHtml = "";
   
@@ -91,6 +105,7 @@ function displayForecast() {
     let forecastElement = document.querySelector("#forecast");
     forecastElement.innerHTML = forecastHtml;
   }
+
 
 
 searchCity("San Jose");
