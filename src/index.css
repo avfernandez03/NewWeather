@@ -99,13 +99,13 @@ a {
     font-size: 16px;
     line-height: 20px;
     margin-bottom: 10px;
-    opacity: 0.5 ;
-    color: rgba(39, 33, 66, 0.4);
+    opacity: 0.6;
+    color: black;
 }
 
 .weather-forecast-icon {
-    font-size: 38px;
-    text-align: center;
+    width:  58px;
+    height: 58px;
     display: block;
     margin: 0 auto;
   }
